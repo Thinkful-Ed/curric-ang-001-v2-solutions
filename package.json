@@ -1,0 +1,23 @@
+{
+  "name": "countries-and-capitals",
+  "version": "1.0.0",
+  "description": "Solution to Countries and Capitals app from ang-001-v2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thinkful-Ed/countries-and-capitals.git"
+  },
+  "author": "Mohammad Umair Khan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thinkful-Ed/countries-and-capitals/issues"
+  },
+  "homepage": "https://github.com/Thinkful-Ed/countries-and-capitals#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^3.2.2"
+  }
+}
