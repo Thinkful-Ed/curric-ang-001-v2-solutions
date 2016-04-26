@@ -1,3 +1,29 @@
 <section class="content">
-  {{vm.text}}
+  <div class="countries-list">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Country Code</th>
+          <th>Capital</th>
+          <th>Area in km2</th>
+          <th>Population</th>
+          <th>Continent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="country in vm.countries">
+          <td>
+            <a ng-href="#/countries/{{country.countryCode}}" ng-bind="country.countryName"></a>
+          </td>
+          <td ng-bind="country.countryCode"></td>
+          <td ng-bind="country.capital"></td>
+          <td ng-bind="country.areaInSqKm"></td>
+          <td ng-bind="country.population"></td>
+          <td ng-bind="country.continent"></td>
+        </tr>
+      </tbody>
+    </table>
+    <button><a ng-href="#/">Home</a></button>
+  </div>
 </section>

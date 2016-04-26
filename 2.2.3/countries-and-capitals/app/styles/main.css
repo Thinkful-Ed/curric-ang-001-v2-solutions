@@ -66,12 +66,33 @@ header .title {
 
 .content {
   text-align: center;
-}
-
-.content.home p {
   padding: 40px 0;
 }
 
 .content.home button {
   margin: 40px 0;
+}
+
+table, th, td {
+   border: 1px solid black;
+}
+
+table {
+  width: 100%;
+}
+
+th, td {
+  padding: 10px 0;
+}
+
+th {
+  font-weight: bold;
+}
+
+thead tr {
+  background-color: gainsboro;
+}
+
+.countries-list button {
+  margin-top: 15px;
 }

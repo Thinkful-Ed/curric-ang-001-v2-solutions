@@ -1,8 +1,17 @@
+(function(angular){
+
 'use strict';
 
 angular.module('countriesAndCapitals')
-  .controller('CountriesCtrl', function(){
+  .controller('CountriesCtrl', function(geonames){
     var vm = this;
 
-    vm.text = 'Countries Route';
+    geonames.countries()
+      .then(function(res){
+        vm.countries = res;
+      });
+
   });
+
+}(window.angular));
+

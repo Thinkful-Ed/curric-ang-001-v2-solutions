@@ -1,3 +1,5 @@
+(function(angular){
+
 'use strict';
 
 angular.module('countriesAndCapitals')
@@ -6,3 +8,5 @@ angular.module('countriesAndCapitals')
 
     vm.text = 'country route';
   });
+
+}(window.angular));
