@@ -1,3 +1,40 @@
 <section class="content">
-  {{vm.text}}
+  <div class="country-details">
+    <table>
+      <tr class="country-title">
+        <td ng-bind="vm.country.countryName"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Population of country:</td>
+        <td>{{vm.country.population | number}}</td>
+      </tr>
+      <tr>
+        <td>Area</td>
+        <td>{{vm.country.areaInSqKm | number}} square km</td>
+      </tr>
+      <tr>
+        <td>Capital:</td>
+        <td ng-bind="vm.country.capital">vm.country.capital</td>
+      </tr>
+      <tr>
+        <td>Population of Capital:</td>
+        <td>{{vm.country.capitalInfo.population | number}}</td>
+      </tr>
+      <tr>
+        <td>3 neighbours</td>
+        <td class="neighbours-list">
+          <ul>
+            <li ng-repeat="neighbour in vm.country.neighbours"><a ng-href="#/countries/{{neighbour.countryCode}}">{{neighbour.countryName}}</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr class="country-details-image">
+        <td><img ng-src="http://www.geonames.org/img/country/250/{{vm.countryCode}}.png" /></td>
+        <td><img ng-src="http://www.geonames.org/flags/x/{{vm.countryCode.toLowerCase()}}.gif" /></td>
+      </tr>
+    </table>
+    <button><a ng-href="#/">Home</a></button>
+    <button><a ng-href="#/countries">Browse Countries</a></button>
+  </div>
 </section>

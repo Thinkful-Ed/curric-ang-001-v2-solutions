@@ -11,7 +11,7 @@ angular.module('countriesAndCapitals', ['ngRoute'])
         controller: 'CountriesCtrl',
         controllerAs: 'vm'
       })
-      .when('/countries/:countryId', {
+      .when('/countries/:countryCode', {
         templateUrl: 'src/country.html',
         controller: 'CountryCtrl',
         controllerAs: 'vm'

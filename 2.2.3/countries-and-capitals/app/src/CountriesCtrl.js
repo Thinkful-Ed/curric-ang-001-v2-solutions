@@ -10,7 +10,6 @@ angular.module('countriesAndCapitals')
       .then(function(res){
         vm.countries = res;
       });
-
   });
 
 }(window.angular));

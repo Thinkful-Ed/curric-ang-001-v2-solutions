@@ -73,26 +73,63 @@ header .title {
   margin: 40px 0;
 }
 
-table, th, td {
+
+.countries-list table, th, td {
    border: 1px solid black;
 }
 
-table {
+.countries-list table {
   width: 100%;
 }
 
-th, td {
+.countries-list th, td {
   padding: 10px 0;
 }
 
-th {
+.countries-list th {
   font-weight: bold;
 }
 
-thead tr {
+.countries-list thead tr {
   background-color: gainsboro;
 }
 
 .countries-list button {
   margin-top: 15px;
 }
+
+.country-title {
+  font-size: 42px;
+}
+
+.country-details table, th, td {
+   border: 0px;
+}
+
+.country-details table {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.neighbours-list ul li {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.country-details-image {
+  margin-top: 20px;
+}
+
+.country-details-image td img {
+  width: 250px;
+  height: 150px;
+}
+
+/*.country-details table tr td:first-child{
+  text-align: right;
+}
+
+.country-details table tr td:last-child{
+  text-align: left;
+}*/

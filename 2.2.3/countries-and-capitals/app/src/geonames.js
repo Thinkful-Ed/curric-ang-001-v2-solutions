@@ -7,41 +7,67 @@ angular.module('countriesAndCapitals')
 
     var baseUrl = 'http://api.geonames.org';
     var username = 'mohuk';
-    var baseConfig = {
-        params: {
-          username: username
-        }
-    };
 
     return {
       countries: countries,
-      neighbours: neighbours
+      neighbours: neighbours,
+      search: search,
+      country: country
     };
 
     function countries(){
-      return $http.get(baseUrl + '/countryInfoJSON', baseConfig)
+      var config = {
+        params: {
+          username: username
+        },
+        cache: true
+      };
+
+      return $http.get(baseUrl + '/countryInfoJSON', config)
         .then(function(res){
           return $q.when(res.data.geonames);
         });
     }
 
-    function neighbours(id){
-      var config = angular.extend({}, baseConfig);
-      config.params.geonameId = id;
+    function neighbours(geonameId){
+      var config = {
+        params: {
+          username: username,
+          geonameId: geonameId
+        }
+      };
 
       return $http.get(baseUrl + '/neighboursJSON', config)
         .then(function(res){
-          return $q.when(res.data);
+          return $q.when(res.data.geonames.splice(0, 3));
         });
     }
 
-    function search(){
-      var config = angular.extend({}, baseConfig);
-      config.params;
+    function search(query){
+      var config = {
+        params: {
+          username: username,
+          q: query
+        }
+      };
 
-      return $http.get(baseUrl + '/search', config)
+      return $http.get(baseUrl + '/searchJSON', config)
         .then(function(res){
-          return $q.when(res.data);
+          return $q.when(res.data.geonames[0]);
+        });
+    }
+
+    function country(countryCode){
+      var config = {
+        params: {
+          username: username,
+          country: countryCode
+        }
+      };
+
+      return $http.get(baseUrl + '/countryInfoJSON', config)
+        .then(function(res){
+          return $q.when(res.data.geonames[0]);
         });
     }
 
