@@ -1,8 +1,11 @@
-# Compiled binary addons (http://nodejs.org/api/addons.html)
-build
-
 # NPM Dependency directory
 node_modules
 
 # Bower Dependency directory
 app/bower_components
+
+# Build folder
+dist
+
+# Temporary folder
+tmp
