@@ -11,3 +11,8 @@ $ npm install && bower install
 ```bash
 $ gulp serve
 ```
+
+## Build
+```bash
+$ gulp build
+```
