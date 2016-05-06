@@ -1,0 +1,166 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: 'Roboto', sans-serif;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  text-align: center;
+  border-bottom: black solid 2px;
+  padding: 40px 0;
+}
+
+header .title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.container {
+  width: 970px;
+  margin: 0 auto;
+}
+
+.content {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.content.home button {
+  margin: 40px 0;
+}
+
+
+.countries-list table, th, td {
+   border: 1px solid black;
+}
+
+.countries-list table {
+  width: 100%;
+}
+
+.countries-list th, td {
+  padding: 10px 0;
+}
+
+.countries-list th {
+  font-weight: bold;
+}
+
+.countries-list thead tr {
+  background-color: gainsboro;
+}
+
+.countries-list button {
+  margin-top: 15px;
+}
+
+.country-title {
+  font-size: 42px;
+}
+
+.country-details table, th, td {
+   border: 0px;
+}
+
+.country-details table {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.neighbours-list ul li {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.country-details-image {
+  margin-top: 20px;
+}
+
+.country-details-image td img {
+  width: 250px;
+  height: 150px;
+}
+
+.ng-enter           { animation: scaleUp 0.5s both ease-in; z-index: 8888; }
+.ng-leave           { animation: slideOutLeft 0.5s both ease-in; z-index: 9999; }
+
+@keyframes rotateFall {
+    0%      { transform: rotateZ(0deg); }
+    20%     { transform: rotateZ(10deg); animation-timing-function: ease-out; }
+    40%     { transform: rotateZ(17deg); }
+    60%     { transform: rotateZ(16deg); }
+    100%    { transform: translateY(100%) rotateZ(17deg); }
+}
+
+/* slide in from the bottom */
+@keyframes slideOutLeft {
+    to      { transform: translateX(-100%); }
+}
+
+/* rotate out newspaper */
+@keyframes rotateOutNewspaper {
+    to      { transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
+}
+
+/* entering animations --------------------------------------- */
+/* scale up */
+@keyframes scaleUp {
+    from    { opacity: 0.3; -webkit-transform: scale(0.8); }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+    from    { transform:translateX(100%); }
+    to      { transform: translateX(0); }
+}
+
+/* slide in from the bottom */
+@keyframes slideInUp {
+    from    { transform:translateY(100%); }
+    to      { transform: translateY(0); }
+}

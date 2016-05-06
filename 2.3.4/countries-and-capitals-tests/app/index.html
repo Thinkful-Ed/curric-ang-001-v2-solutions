@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Countries and Capitals</title>
+  <!-- build:css style.css -->
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+  <!-- endbuild -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+<body ng-app="countriesAndCapitals">
+  <header>
+      <h1 class="title">Countries and Capitals</h1>
+  </header>
+	<div class="container" ng-view></div>
+  <!-- build:vendor app/vendor.js -->
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:app app/app.js -->
+	<script type="text/javascript" src="src/app.js"></script>
+  <script type="text/javascript" src="src/CountriesCtrl.js"></script>
+  <script type="text/javascript" src="src/CountryCtrl.js"></script>
+  <script type="text/javascript" src="src/geonames.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

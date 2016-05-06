@@ -1,0 +1,8 @@
+# NPM Dependency directory
+node_modules
+
+# Bower Dependency directory
+app/bower_components
+
+# Build folder
+dist
