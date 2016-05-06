@@ -1,4 +1,4 @@
-(function(angular){
+(function(){
 
 'use strict';
 
@@ -21,4 +21,4 @@ angular.module('countriesAndCapitals')
       });
   });
 
-}(window.angular));
+}());
