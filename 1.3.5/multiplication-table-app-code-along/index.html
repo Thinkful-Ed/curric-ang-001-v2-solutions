@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" ng-app='myApp'>
+<head>
+    <meta charset="UTF-8">
+    <title>Multiplication Table</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+</head>
+<body>
+    <div ng-controller="MultiplicationCtrl as vm" initial-number-limit="10">
+        <input type="number" ng-model="vm.numberLimit" placeholder="Enter a number" />
+        <table>
+            <tr ng-repeat="numberA in vm.numbers()">
+                <td ng-repeat="numberB in vm.numbers()">
+                    {{ vm.compute(numberA, numberB)  }}
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="myApp.js"></script>
+</body>
+</html>
