@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="">
+<head>
+	<title>ngMadLibs</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
+	<script type="text/javascript" src="https://code.angularjs.org/1.5.7/angular.js"></script>
+</head>
+<body class="container">
+	<section class="title-bar section-border clear-fix">
+		<div class="smiling-logo">
+			<img src="mad-lib-happy-face.png" width="125px" height="125px">
+		</div>
+		<div class="madlib-logo">
+			<img src="ng-mad-libs-logo.png">
+		</div>
+	</section>
+	<section class="section-border madlib-input">
+		<h1>Provide the following words:</h1>
+		<input type="text" ng-model="femaleName" placeholder="female name">
+		<input type="text" ng-model="dirtyTask" placeholder="dirty task">
+		<input type="text" ng-model="obnoxiousCelebrity" placeholder="obnoxious celebrity">
+		<input type="text" ng-model="jobTitle" placeholder="job title">
+		<input type="text" ng-model="celebrity" placeholder="celebrity">
+		<input type="text" ng-model="hugeNumber" placeholder="huge number">
+		<input type="text" ng-model="tediousTask" placeholder="tedious task">
+		<input type="text" ng-model="uselessSkill" placeholder="useless skill">
+		<input type="text" ng-model="adjective" placeholder="adjective">
+	</section>
+	<section class="section-border madlib-content">
+		<p>
+			{{femaleName || "{female name}"}} was a {{jobTitle || "{job title}"}} who loved technology. Although she loved parts of her job, she absolutely hated  {{tediousTask || "{tedious task}"}} and {{dirtyTask || "{dirty task}"}}. So, {{femaleName || "{female name}"}} met with her life mentor {{celebrity || "{celebrity}"}} who told her to learn how to {{uselessSkill || "{useless skill}"}} with Thinkful. Thinkful didn't offer a course on {{uselessSkill || "{useless skill}"}} so she studied programming instead.
+
+			What a great decision! With her new skills, {{femaleName || "{female name}"}} built a(n) {{adjective || "{adjective}"}} robot named {{obnoxiuousCelebrity || "{obnoxious celebrity}"}} that not only loved {{dirtyTask || "{dirty task}"}} but did it {{hugeNumber || "{huge number}"}} faster.
+		</p>
+	</section>
+</body>
+</html>
