@@ -1,0 +1,19 @@
+<div id="messages">
+    <div class="message" ng-repeat="m in messages">
+        <strong>{{ m.userName }}</strong>
+        <em>{{ m.datetime | date }}</em> :
+        <span>{{ m.message }}</span>
+    </div>
+</div>
+<form name="chatForm" ng-submit="vm.sendMessage(send)">
+    <fieldset>
+        <input required name="userName" type="text"
+            ng-model="send.userName"
+            id="userName" placeholder="Name">
+        <input required name="message" type="text"
+            ng-model="send.message"
+            id="message" placeholder="Message&hellip;">
+        <!-- submit button: pressing return submits -->
+        <input hidden type="submit">
+    </fieldset>
+</form>
